@@ -370,17 +370,16 @@ class Wallet:
         '''I get it from the table and translate it into a dict'''
         dic = dict()
         tables = f"""SHOW COLUMNS FROM {'t' + str(self.messageid)};"""
-        db = TelbotDatabase()
 
         '''collects type and value'''
         vol = f"""SELECT * FROM {'t' + str(self.messageid)};"""
 
         if currency == 'usd':
-            cur = [take[0] for take in db.data_answer(tables)]
-            volume = list(db.data_answer(vol))[0]
+            cur = [take[0] for take in self.database.data_answer(tables)]
+            volume = list(self.database.data_answer(vol))[0]
         else:
-            cur = [take[0] for take in db.data_answer(tables) if take[0] != 'usd']
-            volume = list(db.data_answer(vol))[0][1:]
+            cur = [take[0] for take in self.database.data_answer(tables) if take[0] != 'usd']
+            volume = list(self.database.data_answer(vol))[0][1:]
 
 
         '''pack in dict'''
