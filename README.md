@@ -1,7 +1,7 @@
 # Trading telegram bot 🤖
 ### About the project 👀
-My first big project, where I show how my programming knowledge of Python, SQL(MySQL), API Telegram. 
-This is project created learn user with not to experience trading in cryptocurrency market.
+My first big project where I show my programming knowledge in Python, SQL(MySQL) and Telegram API. 
+This project was created for users with no experience in the crypto market.
 
 ## Getting started
 ### Prerequisites
